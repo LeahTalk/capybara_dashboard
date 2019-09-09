@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Capybara Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Capybaras!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/capybaras/new">Add a new capybara! <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+        </nav>
+        <div class="jumbotron">
+        <h1 class="display-4">Capybaras!</h1>
+        <p class="lead">The capybara gives out a lot of love, so we decided to give some back. The world's largest rodent which gets along with everybody!</p>
+        <hr class="my-4">
+        <img src = '/images/capybara.jpg' alt = "capybara and friends" height = 300px> 
+    </div>
+    <h3>Check out some of our capybaras:</h3>
+    <ul>
+        <% for(capybara of capybaras) { %>
+            <li>
+                <a href = '/capybaras/<%= capybara._id %>'><%= capybara.name %></a>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

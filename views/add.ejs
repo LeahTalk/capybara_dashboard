@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Capybara Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Capybaras!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/capybaras/new">Add a new capybara! <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+        </nav>
+        <h3>Add a new capybara:</h3>
+        <form action = '/capybaras' method = 'post'>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name = 'name'>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput2">Weight (in pounds)</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Weight" name = 'weight'>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = 'desc'></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add my capybara!</button>
+        </form>
+    </div>
+</body>
+</html>
